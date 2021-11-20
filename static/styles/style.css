@@ -1,0 +1,823 @@
+.Log_In a{
+    width: 100px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 32px;
+    left: 1504px;
+    font-family: Lato;
+    font-weight: Bold;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+    z-index: 1;
+}
+
+.Join a{
+    position: absolute;
+    left: 1604px;
+    top: 3px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 80px;
+    /* or 444% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+    z-index: 1;
+
+    color: #0297FF;
+}
+
+.container {
+    z-index: 1;
+    position: absolute;
+    width: 264px;
+    height: 341px;
+    left: 1263px;
+    top: 264px;
+    border-radius: 25px;
+    
+    background: rgba(249, 250, 255, 0.55);;
+}
+
+.Make select{
+    position: absolute;
+    width: 160px;
+    height: 36px;
+    left: 83px;
+    top: 57px;
+}
+
+
+.Make_name {
+    position: absolute;
+    width: 10px;
+    height: 36px;
+    left: 33px;
+    top: 65px;
+}
+
+.Model_name{
+    position: absolute;
+    width: 10px;
+    height: 36px;
+    left: 30px;
+    top: 110px;
+}
+
+.right_car {
+    position: absolute;
+    width: 208px;
+    height: 33px;
+    left: 36px;
+    top: 13px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 80px;
+    /* or 333% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Model select{
+    position: absolute;
+    width: 160px;
+    height: 36px;
+    left: 83px;
+    top: 102px;
+}
+
+.Colour select{
+    position: absolute;
+    width: 160px;
+    height: 36px;
+    left: 83px;
+    top: 147px;
+}
+
+.Colour_name {
+    position: absolute;
+    width: 10px;
+    height: 36px;
+    left: 30px;
+    top: 155px;
+}
+
+.Year select{
+    position: absolute;
+    width: 160px;
+    height: 36px;
+    left: 83px;
+    top: 192px;
+}
+
+.Year_name{
+    position: absolute;
+    width: 10px;
+    height: 36px;
+    left: 40px;
+    top: 198px;
+}
+
+.nav-container {
+    position: absolute;
+    Height: 62.66px;
+    left: 0.0%;
+    right: 0.0%;
+    top: 67px;
+    bottom: -7.91%;
+
+    background: rgba(0, 118, 190, 0.94);
+    z-index: 1;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30%;
+    margin-left: 250px
+}
+
+.nav-items li {
+    list-style: none;
+    margin-right:10px;
+}
+
+.nav-items li a{
+    
+position: absolute;
+height:170px;
+margin-left: 100px;
+margin-right:100px;
+
+font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 18px;
+line-height: 20px;
+color: #FFFFFF;
+
+display: flex;
+align-items: center;
+letter-spacing: -0.022em;
+
+z-index: 1;
+
+}
+
+.Turners_Image {
+    position: absolute;
+    left: 5.08%;
+    right: 71.23%;
+    top: 20px;
+    bottom: 29.5%;
+}
+
+.banner_image {
+    position: absolute;
+    width: 100%;
+    height: 873px;
+    left: -1px;
+    right: 10px;
+    top: 0px;
+}
+
+.banner_image img {
+    width:100%;
+}
+
+.cars {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top:0px;
+    left: -1px;
+    right:-1px;
+}
+
+.cars img{
+    width: 1900px;
+    top: 0px;
+}
+
+.Turners_Image p {
+    position: absolute;
+    left: 190px;
+    right: 71.23%;
+    top: -60px;
+    bottom: 29.5%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    /* or 200% */
+
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.slidecontainer {
+    position: absolute;
+    width: 240px;
+    height: 0px;
+    left: 70px;
+    top: 250.5px;
+
+}
+
+.minvalue {
+    position: absolute;
+    width: 240px;
+    height: 0px;
+    left: 40px;
+    top: 251.5px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #002844;
+}
+
+.maxvalue {
+    position: absolute;
+    width: 240px;
+    height: 0px;
+    left: 205px;
+    top: 251.5px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #002844;
+}
+
+.slidecontainer p{
+    position: absolute;
+    width: 100px;
+    height: 59.83px;
+    left: 25px;
+    top: 5px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 80px;
+    /* or 444% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+    }
+
+.Sell {
+    position: absolute;
+    width: 350px;
+    height: 252px;
+    left: 267px;
+    top: 692px;
+    z-index: 1;
+    background: rgba(220, 226, 255, 0.54);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+}
+
+.Sell_and_trade {
+    position: absolute;
+    left: 15.43%;
+    right: 9.43%;
+    top: 1.19%;
+    bottom: 55.16%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 80px;
+    /* or 167% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.Sell_small_text {
+    position: absolute;
+    left: 18.43%;
+    right: 13.43%;
+    top: 44.44%;
+    bottom: 45.63%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.Insure_small_text {
+    position: absolute;
+    left: 18.43%;
+    right: 13.43%;
+    top: 44.44%;
+    bottom: 45.63%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.Finance_small_text {
+    position: absolute;
+    left: 18.43%;
+    right: 13.43%;
+    top: 44.44%;
+    bottom: 45.63%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.Auto_insurance {
+    position: absolute;
+    left: 6.43%;
+    right: 9.43%;
+    top: 1.19%;
+    bottom: 55.16%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 40px;
+    /* or 167% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.Finance_text {
+    position: absolute;
+    left: 25.43%;
+    right: 9.43%;
+    top: 1.19%;
+    bottom: 55.16%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 40px;
+    /* or 167% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+}
+
+.Insure {
+    position: absolute;
+    width: 350px;
+    height: 252px;
+    left: 636px;
+    top: 692px;
+    z-index: 1;
+    background: rgba(220, 226, 255, 0.54);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+}
+
+.Finance {
+    position: absolute;
+    width: 350px;
+    height: 252px;
+    left: 1007px;
+    top: 692px;
+    z-index: 1;
+    background: rgba(220, 226, 255, 0.54);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+}
+
+.Sell_round {
+    position: absolute;
+    position: absolute;
+    left: 26.57%;
+    right: 26.32%;
+    top: 67.46%;
+    bottom: 10.71%;
+
+    border-radius: 10px;
+    Width: 164.87px;
+    Height: 55px;
+
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.Insure_round {
+    position: absolute;
+    position: absolute;
+    left: 26.57%;
+    right: 26.32%;
+    top: 67.46%;
+    bottom: 10.71%;
+
+    border-radius: 10px;
+    Width: 164.87px;
+    Height: 55px;
+
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.Finance_round {
+    position: absolute;
+    position: absolute;
+    left: 26.57%;
+    right: 26.32%;
+    top: 67.46%;
+    bottom: 10.71%;
+
+    border-radius: 10px;
+    Width: 164.87px;
+    Height: 55px;
+
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.Sell_round a{
+    position: absolute;
+    left: 7.3%;
+    right: 7.17%;
+    top: -25.2%;
+    bottom: -20.26%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 80px;
+    /* identical to box height, or 333% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Insure_round a{
+    position: absolute;
+    left: 11.3%;
+    right: 7.17%;
+    top: -25.2%;
+    bottom: -20.26%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 80px;
+    /* identical to box height, or 333% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Finance_round a{
+    position: absolute;
+    left: 34.3%;
+    right: 7.17%;
+    top: -25.2%;
+    bottom: -20.26%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 80px;
+    /* identical to box height, or 333% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Looking_for_something_else{
+    position: absolute;
+    width: 510.29px;
+    height: 64px;
+    left: 275px;
+    top: 1250px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 63px;
+    /* identical to box height, or 159% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Vehicle_selection {
+    position: absolute;
+    left: 276px;
+    top: 1350px;
+    bottom: 66.95%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    /* identical to box height, or 104% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.See_all {
+    position: absolute;
+    
+    top: 1244px;
+    left: 1450px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 80px;
+    /* identical to box height, or 333% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Slide_image {
+    position: absolute;
+    width: 1430px;
+    height: 405px;
+    left: 265px;
+    top: 1410px;
+}
+
+.Feeling_confident {
+    position: absolute;
+    width: 416px;
+    height: 80px;
+    left: 270px;
+    top: 1871px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    /* identical to box height, or 200% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Trusted_dealer {
+    position: absolute;
+    left: 272px;
+    top: 1979px;
+    bottom: 48.21%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    /* identical to box height, or 104% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Porsche_image img{
+    position: absolute;
+    width: 100%;
+    left: -1px;
+    top: 2032px;
+}
+
+.Badge_image img{
+    position: absolute;
+    width: 130px;
+    height: 129px;
+    left: 272px;
+    top: 2120px;
+    scale:2;
+}
+
+.Others_saying{
+    position: absolute;
+    width: 510.29px;
+    height: 64px;
+    left: 272px;
+    top: 2673px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 63px;
+    /* identical to box height, or 159% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Latest_blogs{
+    position: absolute;
+    left: 272px;
+    top: 2750px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    /* identical to box height, or 104% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.See_all_2 {
+    position: absolute;
+    left: 1450px;
+    top: 2710px;
+    bottom: 26.11%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 80px;
+    /* identical to box height, or 333% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.022em;
+
+    color: #002844;
+}
+
+.Impreza_img img {
+    position: absolute;
+    width: 350px;
+    height: 328px;
+    left: 264px;
+    top: 2805px;
+}
+
+.Lamborghini_img img {
+    position: absolute;
+    width: 350px;
+    height: 328px;
+    left: 610px;
+    top: 2805px;
+}
+
+.RX7_img img {
+    position: absolute;
+    width: 350px;
+    height: 328px;
+    left: 956px;
+    top: 2805px;
+}
+
+.Mustang_img img {
+    position: absolute;
+    width: 350px;
+    height: 328px;
+    left: 1302px;
+    top: 2805px;
+}
+
+.Arrows_img img{
+    position: absolute;
+    width: 139px;
+    height: 49px;
+    left: 1168px;
+    top: 3150px;
+}
+
+.Background_img img{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 3250px;
+
+background: #F5F9FF;
+}
+
+.Footer_img img{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 3250px;
+
+background: #F5F9FF;
+}
