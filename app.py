@@ -35,4 +35,4 @@ if __name__ == '__main__':
 
 @app.route("/third", methods=['GET','POST'])
 def third():
-    return "Hello"
+    return render_template('Test.html')
