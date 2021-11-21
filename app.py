@@ -7,8 +7,6 @@ app.secret_key = "hello"
 def home():
     return render_template('index.html')
 
-
-
 @app.route("/second", methods=['GET','POST'])
 def second():
     if request.method == "POST":
