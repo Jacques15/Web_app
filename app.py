@@ -32,3 +32,7 @@ def second():
     
 if __name__ == '__main__':
     app.run()
+
+@app.route("/third", methods=['GET','POST'])
+def third():
+    return "Hello"
