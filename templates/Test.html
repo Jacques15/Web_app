@@ -113,13 +113,13 @@
         <div class = "Option3"></div>
         <div class = "Option3_color"></div>
         <div class="Check1">
-            <input type="checkbox" id="music" name="interest" value="music">
+            <input type="checkbox" id="Check1" name="interest" value="music">
         </div>
         <div class="Check2">
-            <input type="checkbox" id="music" name="interest" value="music">
+            <input type="checkbox" id="Check2" name="interest" value="music">
         </div>
         <div class="Check3">
-            <input type="checkbox" id="music" name="interest" value="music">
+            <input type="checkbox" id="Check3" name="interest" value="music">
         </div>
         <div class = "Cost1">$30.50</div>
         <div class = "Cost2">$22.50</div>
@@ -139,11 +139,11 @@
         <div class = "Learn_more">
             <img src="./static/images/Learn.png" alt="Learn">
         </div>
-        <div class = "Box_selected">
+        <div class = "Box_selected" id = "Box_selected">
             <div class = "Option_display"></div>
             <div class = "Blue_color"></div>
 
-            <div class = First_selected>
+            <div class = First_selected id = "First_selected">
                 <div class = "Cost1_copy">$30.50</div>
                 <span class = "Per_fortnight1_copy">Per fortnight</span>
                 <div class = "Condition1_copy">$60 per month $743 anually </div>
@@ -153,7 +153,7 @@
                 <div class="First_option_cost">$30.50</div>
             </div>
 
-            <div class = "Second_selected">
+            <div class = "Second_selected" id = "Second_selected">
                 <div class = "Cost2_copy">$22.50</div>
                 <div class = "Per_fortnight2_copy">Per fortnight</div>
                 <div class = "Condition2_copy">$44 per month $510 anually </div>
@@ -164,7 +164,7 @@
             </div>
             
             
-            <div class = "Third_selected">
+            <div class = "Third_selected" id = "Third_selected">
                 <div class = "Cost3_copy">$10.50</div>
                 <div class = "Per_fortnight3_copy">Per fortnight</div>
                 <div class = "Condition3_copy">$20 per month $220 anually </div>
@@ -353,6 +353,7 @@
 
 
     </script>
+
     <script>
         var check1 = document.getElementById('Check1');
         var check2 = document.getElementById('Check2');
@@ -361,8 +362,8 @@
         var second_selected = document.getElementById('Second_selected');
         var third_selected = document.getElementById('Third_selected');
         var box_selected = document.getElementById('Box_selected');
-            
-    
+        
+
         check1.onclick = function() {
             check1.checked = true;
             check2.checked = false;
