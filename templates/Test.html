@@ -353,5 +353,43 @@
 
 
     </script>
+    <script>
+        var check1 = document.getElementById('Check1');
+        var check2 = document.getElementById('Check2');
+        var check3 = document.getElementById('Check3');
+        var first_selected = document.getElementById('First_selected');
+        var second_selected = document.getElementById('Second_selected');
+        var third_selected = document.getElementById('Third_selected');
+        var box_selected = document.getElementById('Box_selected');
+            
+    
+        check1.onclick = function() {
+            check1.checked = true;
+            check2.checked = false;
+            check3.checked = false;
+            box_selected.style.display = 'block';
+            first_selected.style.display = 'block';
+            second_selected.style.display = 'none';
+            third_selected.style.display = 'none';
+        }
+        check2.onclick = function() {
+            check2.checked = true;
+            check1.checked = false;
+            check3.checked = false;
+            box_selected.style.display = 'block';
+            second_selected.style.display = 'block';
+            first_selected.style.display = 'none';
+            third_selected.style.display = 'none';
+        }
+        check3.onclick = function() {
+            check2.checked = true;
+            check1.checked = false;
+            check2.checked = false;
+            box_selected.style.display = 'block';
+            third_selected.style.display = 'block';
+            second_selected.style.display = 'none';
+            first_selected.style.display = 'none';
+        }        
+        </script>
 </body>
 </html>
