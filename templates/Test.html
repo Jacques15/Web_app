@@ -12,5 +12,194 @@
         <img src="./static/images/Turners.png" alt="Turners not Found">
         <p>Cars</p>
     </div>
+    <nav>
+        <link  rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}" >
+            <div class = "Turners_Image">
+        <img src="./static/images/Turners.png" alt="Turners not Found">
+        <p>Cars</p>
+    </div>
+    <div class="nav-container"></div>
+    <div class="wrapper"></div>
+        <ul class="nav-items">
+            <li>
+                <a href="#">Buy a Car</a>
+            </li>
+            <li>
+                <a href="#">Sell Your Car</a>
+            </li>
+            <li>
+                <a href="#">Finance</a>
+            </li>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="Log_In">
+        <li>
+            <a href="#">Log In</a>
+        </li>
+    </div>
+
+    <div class="Join">
+        <li>
+            <a href="#">Join</a>
+        </li>
+    </div>
+    
+    <div class="Bar">
+        <img src="./static/images/Bar.png" alt="Bar">
+    </div>
+
+    <div class = "Box1">
+        <span class = "Auto_quote">Instant Auto Qoute</span>
+        <span class = "Vehicle_details">Vehicle Details</span>
+        <div class = "Box2">
+            <span class = "Registration_number" id="help">Registration number</span>
+        </div>
+    </div>
+    <span class= "Dont_have">Don't have it?</span>
+    <span class= "Make_model">Pick a make and model</span>
+    <input class="Registration_input" type = "text"></label>
+    <form method ="post" action="">
+        <button class = "Find" type="submit" name = "button_a" value="button_a">Find</button>
+        <button class = "Yes" type="submit" name = "Yes1" value="Yes1">Yes</button>
+        <button class = "No" type="submit" name = "No1" value="No1">No</button>
+    </form> 
+    <span class= "Car_park">Where is the car usually parked:</span>
+    <input class="Park_input" type = "text"></label>
+    <span class= "Used_business">Is it used for business:</span>
+    <div class = "Box3">
+        <span class="Driver_details"> Driver Details (You)</span>
+        <span class="Birth_date"> Date of Birth:</span>
+        <input class="Birth_date_text" type = "text"></label>
+        <span class="Date">Day/Month/Year</span>
+        <span class="Gender">Gender</span>
+        <form method ="post" action="">
+            <button class = "Man" type="submit" name="Man" value="Man">Man</button>
+        </form>
+        <button class = "Woman" type="button">Woman</button>
+        <span class = "Another_policy">Do you have another policy with Turners?
+        </span>
+        <button class = "Policy_yes">Yes</button>
+        <button class = "Policy_no">No</button>
+        <span class = "What_licence">What licence do you have?</span>
+        <div class="Licence">
+            <select name="Licence" id="Licence">
+                <option value="Full-Licence">Full-Licence</option>
+                <option value="Restricted">Restriced</option>
+                <option value="Learners">Learners</option>
+            </select>
+        </div>
+        <div class="licence">
+        <span class="Another_driver">Add another driver?</span>
+        </div>
+        <button class = "Another_driver_yes">Yes</button>
+        <button class = "Another_driver_no">No</button>
+    </div>
+    <div class = "Box4" id="Test">
+        <div class = Dummy_box></div>
+        <span class="Our_plans">Our Plans</span>
+        <div class="Decide_later">
+            <img src="./static/images/Decide_later.png" alt="Decide later">
+        </div>
+        <div class = "Line"></div>
+        <span class = "Selected">You've selected:</span>
+        <div class = "Option1"></div>
+        <div class = "Option1_color"></div>
+        <div class = "Option2"></div>
+        <div class = "Option2_color"></div>
+        <div class = "Option3"></div>
+        <div class = "Option3_color"></div>
+        <div class="Check1">
+            <input type="checkbox" id="music" name="interest" value="music">
+        </div>
+        <div class="Check2">
+            <input type="checkbox" id="music" name="interest" value="music">
+        </div>
+        <div class="Check3">
+            <input type="checkbox" id="music" name="interest" value="music">
+        </div>
+        <div class = "Cost1">$30.50</div>
+        <div class = "Cost2">$22.50</div>
+        <div class = "Cost3">$10.50</div>
+        <div class = "Per_fortnight1">Per fortnight</div>
+        <div class = "Per_fortnight2">Per fortnight</div>
+        <div class = "Per_fortnight3">Per fortnight</div>
+        <div class = "Condition1">$60 per month $743 anually </div>
+        <div class = "Condition2">$44 per month $510 anually </div>
+        <div class = "Condition3">$20 per month $220 anually </div>
+        <div class = "More_info1">Comprehensive</div>
+        <div class = "More_info2">3rd Party Fire & Theft</div>
+        <div class = "More_info3">3rd Party</div>
+        <div class = "Paragraph1"> Comprehensive covers your car as well as damadge caused to someone else's car - our broadest plan.</div>
+        <div class = "Paragraph2"> Covers fires and theft and any damadge caused to someone else's property</div>
+        <div class = "Paragraph3"> Covers you for any damadge caused to someone else's property</div>
+        <div class = "Learn_more">
+            <img src="./static/images/Learn.png" alt="Learn">
+        </div>
+        <div class = "Box_selected">
+            <div class = "Option_display"></div>
+            <div class = "Blue_color"></div>
+
+            <div class = First_selected>
+                <div class = "Cost1_copy">$30.50</div>
+                <span class = "Per_fortnight1_copy">Per fortnight</span>
+                <div class = "Condition1_copy">$60 per month $743 anually </div>
+                <div class = "More_info1_copy">Comprehensive</div>
+                <div class = "Paragraph1_copy"> Comprehensive covers your car as well as damadge caused to someone else's car - our broadest plan.</div>
+                <div class="First_option_display">Comprehensive Plan</div>
+                <div class="First_option_cost">$30.50</div>
+            </div>
+
+            <div class = "Second_selected">
+                <div class = "Cost2_copy">$22.50</div>
+                <div class = "Per_fortnight2_copy">Per fortnight</div>
+                <div class = "Condition2_copy">$44 per month $510 anually </div>
+                <div class = "More_info2_copy">3rd Party Fire & Theft</div>
+                <div class = "Paragraph2_copy"> Covers fires and theft and any damadge caused to someone else's property</div>
+                <div class="Second_option_display">3rd Party Fire & Theft</div>
+                <div class="Second_option_cost">$22.50</div>
+            </div>
+            
+            
+            <div class = "Third_selected">
+                <div class = "Cost3_copy">$10.50</div>
+                <div class = "Per_fortnight3_copy">Per fortnight</div>
+                <div class = "Condition3_copy">$20 per month $220 anually </div>
+                <div class = "More_info3_copy">3rd Party</div>
+                <div class = "Paragraph3_copy"> Covers you for any damadge caused to someone else's property</div>
+                <div class="Third_option_display">3rd Party</div>
+                <div class="Third_option_cost">$10.00</div>
+            </div>
+
+            <div class="Policy_discount">Multiple policy discount:</div>
+            <div class="Policy_cost">$0.00</div>
+            <div class="Optional_coverages">Optional Coverages:</div>
+            <div class="Coverages_cost">$0.00</div>
+            <button class = "Buy_now">Buy Now</button>
+            <div class = "Background">
+                <img src="./static/images/Shaded_background.png" alt="Background">
+            </div>
+            <div class = "Footer">
+                <img src="./static/images/Footer.png" alt="Footer">
+            </div>
+
+        </div>
+    </div>
+    </div>
+    {% if a==2 %}
+    <script>
+        elem = document.getElementById('help');
+        elem.style.display= 'none';
+    </script>
+    {% endif %}
+    {% if a==0 %}
+    <script>
+        elem = document.getElementById('help');
+        elem.style.display= 'block';
+    </script>
+    {% endif %}
 </body>
 </html>
