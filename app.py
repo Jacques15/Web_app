@@ -35,4 +35,23 @@ if __name__ == '__main__':
 
 @app.route("/third", methods=['GET','POST'])
 def third():
-    return render_template('Test.html')
+    if request.method == "POST":
+        if request.form.get("button_a"):
+            print("Find Pressed!!")
+            session["a"] = 2
+            if "a" in session:
+                a = session["a"]
+            return render_template('Test.html', a = a)
+
+        if request.form.get("Yes1"):
+            print("Yes Pressed")
+        if request.form.get("No1"):
+            print("No Pressed")
+        if request.form.get("Man"):
+            print("Man Pressed")
+    
+    if "a" in session:
+        a = session["a"]
+        return render_template('Test.html',a = a)
+    else:
+        return render_template('Test.html')
