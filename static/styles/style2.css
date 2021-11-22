@@ -1089,7 +1089,7 @@ background: #0076BE;
 }
 
 .Box_selected{
-    display: block;
+    display: none;
 }
 
 .Cost1_copy{
@@ -1523,7 +1523,7 @@ background: #0076BE;
 }
 
 .Third_selected{
-    display:block;
+    display: none;
 }
 
 .Policy_discount {
@@ -1636,4 +1636,23 @@ background: #0076BE;
     height:337px;
     left: 0px;
     top: 1020px;
+}
+
+.Cars {
+    position: absolute;
+    left: 14.7%;
+    right: 72.27%;
+    top: 0%;
+    bottom: 34.43%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    /* identical to box height, or 200% */
+
+    letter-spacing: -0.022em;
+
+    color: #9A9A99;
 }
