@@ -324,8 +324,9 @@ nav ul{
     width:180px;
     height:40px;
 
-    background: #083F6D;
-    color:white;
+    /*background: #083F6D;*/
+    background: white;
+    color:black;
     border-radius: 5px;
     font-size: 18px;
 }
