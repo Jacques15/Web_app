@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document1</title>
+    <title>Document</title>
     <link  rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}" >
 </head>
 <body>
-    
-</body>
-</html> 
     <div class = "Turners_Image">
+        <img src="./static/images/Turners.png" alt="Turners not Found">
+        <p>Cars</p>
+    </div>
+    <nav>
+        <link  rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}" >
+            <div class = "Turners_Image">
         <img src="./static/images/Turners.png" alt="Turners not Found">
         <p>Cars</p>
     </div>
@@ -53,34 +56,34 @@
         <span class = "Auto_quote">Instant Auto Qoute</span>
         <span class = "Vehicle_details">Vehicle Details</span>
         <div class = "Box2">
-            <span class = "Registration_number" id="help">Registration number</span>
+        <span class = "Registration_number" id="help">Registration number</span>
         </div>
     </div>
     <span class= "Dont_have">Don't have it?</span>
     <span class= "Make_model">Pick a make and model</span>
-    <input class="Registration_input" type = "text"></label>
+    <button class = "Yes" type="submit" name = "Yes1" value="Yes1" id="Yes1">Yes</button>
+    <button class = "No" type="button" name = "No1" value="No1" id = "No1">No</button>
+    <input class="Registration_input" type = "text" id = "Registration_input"></label>
+    <input class="Park_input" type = "text" id = "Park_input"></label>
     <form method ="post" action="">
-        <button class = "Find" type="submit" name = "button_a" value="button_a">Find</button>
-        <button class = "Yes" type="submit" name = "Yes1" value="Yes1">Yes</button>
-        <button class = "No" type="submit" name = "No1" value="No1">No</button>
+        <button class = "Find" type="button" name = "button_a" value="button_a">Find</button>
     </form> 
     <span class= "Car_park">Where is the car usually parked:</span>
-    <input class="Park_input" type = "text"></label>
     <span class= "Used_business">Is it used for business:</span>
-    <div class = "Box3">
+    <div class = "Box3" id = "Box3">
         <span class="Driver_details"> Driver Details (You)</span>
         <span class="Birth_date"> Date of Birth:</span>
-        <input class="Birth_date_text" type = "text"></label>
+        <input class="Birth_date_text" id = "Birth_date" type = "text"></label>
         <span class="Date">Day/Month/Year</span>
         <span class="Gender">Gender</span>
         <form method ="post" action="">
-            <button class = "Man" type="submit" name="Man" value="Man">Man</button>
+            <button class = "Man" type="button" name="Man" value="Man" id = "Man">Man</button>
         </form>
-        <button class = "Woman" type="button">Woman</button>
+        <button class = "Woman" type="button" id = "Woman">Woman</button>
         <span class = "Another_policy">Do you have another policy with Turners?
         </span>
-        <button class = "Policy_yes">Yes</button>
-        <button class = "Policy_no">No</button>
+        <button class = "Policy_yes" id = "Policy_yes">Yes</button>
+        <button class = "Policy_no" id = "Policy_no">No</button>
         <span class = "What_licence">What licence do you have?</span>
         <div class="Licence">
             <select name="Licence" id="Licence">
@@ -92,10 +95,10 @@
         <div class="licence">
         <span class="Another_driver">Add another driver?</span>
         </div>
-        <button class = "Another_driver_yes">Yes</button>
-        <button class = "Another_driver_no">No</button>
+        <button class = "Another_driver_yes" id = "Another_driver_yes">Yes</button>
+        <button class = "Another_driver_no" id = "Another_driver_no">No</button>
     </div>
-    <div class = "Box4" id="Test">
+    <div class = "Box4" id="Box4">
         <div class = Dummy_box></div>
         <span class="Our_plans">Our Plans</span>
         <div class="Decide_later">
@@ -186,16 +189,169 @@
         </div>
     </div>
     </div>
-    {% if a==2 %}
     <script>
-        elem = document.getElementById('help');
-        elem.style.display= 'none';
+        var yes1 = document.getElementById('Yes1');
+        var no1 = document.getElementById("No1");
+        var park_input = document.getElementById("Park_input");
+        var registration_input = document.getElementById("Registration_input");
+        var box3 = document.getElementById('Box3');
+        yes1.onclick = function() {
+            yes1.style.color= 'white';
+            yes1.style.background = '#083F6D';
+            no1.style.color = '#083F6D';
+            no1.style.background = 'white';
+            if ((registration_input.value.length > 0) && (park_input.value.length > 0))
+            {
+                box3.style.display = 'block';
+            }
+        }
+        no1.onclick = function() {
+            no1.style.color = 'white';
+            no1.style.background = '#083F6D';
+            yes1.style.color = '#083F6D';
+            yes1.style.background = 'white';
+            if ((registration_input.value.length > 0) && (park_input.value.length > 0))
+            {
+                box3.style.display = 'block';
+            }
+        }
+        park_input.addEventListener('keyup', function(){
+            if (registration_input.value.length > 0) 
+            {
+                if ((yes1.style.color == 'white') || (no1.style.color == 'white')){
+                    box3.style.display = 'block';
+                }
+            }
+            if (park.value.length == 0){
+                box3.style.display = 'none';
+            }
+        });
+
+        registration_input.addEventListener('keyup', function(){
+            if (park_input.value.length > 0)  {
+                if ((yes1.style.color == 'white') || (no1.style.color == 'white'))
+                {
+                    box3.style.display = 'block';
+                }
+            }
+            if (registration_input.value.length == 0)  {
+                box3.style.display = 'none';
+                
+            }
+        });
+
     </script>
-    {% endif %}
-    {% if a==0 %}
+
     <script>
-        elem = document.getElementById('help');
-        elem.style.display= 'block';
+        var woman = document.getElementById('Woman');
+        var man = document.getElementById("Man");
+        var policy_yes = document.getElementById('Policy_yes');
+        var policy_no = document.getElementById("Policy_no");
+        var another_driver_yes = document.getElementById("Another_driver_yes");
+        var another_driver_no = document.getElementById("Another_driver_no");
+        var birth_date = document.getElementById("Birth_date");
+        var box4 = document.getElementById("Box4");
+        
+        woman.onclick = function() {
+            woman.style.color= 'white';
+            woman.style.background = '#083F6D';
+            man.style.color = '#083F6D';
+            man.style.background = 'white';
+            if ((policy_yes.style.color == 'white') || (policy_no.style.color == 'white'))
+                 {
+                    if ((another_driver_yes.style.color == 'white') || (another_driver_no.style.color == 'white')){
+                        if (birth_date.value.length > 0){
+                            box4.style.display = 'block';
+                        }
+                    }
+                 }
+        }
+        man.onclick = function() {
+            man.style.color = 'white';
+            man.style.background = '#083F6D';
+            woman.style.color = '#083F6D';
+            woman.style.background = 'white';
+            if ((policy_yes.style.color == 'white') || (policy_no.style.color == 'white'))
+                 {
+                    if ((another_driver_yes.style.color == 'white') || (another_driver_no.style.color == 'white')){
+                        if (birth_date.value.length > 0){
+                            box4.style.display = 'block';
+                        }
+                    }
+                 }
+        }
+
+        policy_yes.onclick = function() {
+            policy_yes.style.color= 'white';
+            policy_yes.style.background = '#083F6D';
+            policy_no.style.color = '#083F6D';
+            policy_no.style.background = 'white';
+            if ((woman.style.color == 'white') || (man.style.color == 'white'))
+                 {
+                    if ((another_driver_yes.style.color == 'white') || (another_driver_no.style.color == 'white')){
+                        if (birth_date.value.length > 0){
+                            box4.style.display = 'block';
+                        }
+                    }
+                }
+        }
+
+        policy_no.onclick = function() {
+            policy_no.style.color = 'white';
+            policy_no.style.background = '#083F6D';
+            policy_yes.style.color = '#083F6D';
+            policy_yes.style.background = 'white';
+            if ((woman.style.color == 'white') || (man.style.color == 'white'))
+                {
+                    if ((another_driver_yes.style.color == 'white') || (another_driver_no.style.color == 'white')){
+                        if (birth_date.value.length > 0){
+                            box4.style.display = 'block';
+                        }
+                    }
+                }
+        }
+
+        another_driver_yes.onclick = function() {
+            another_driver_yes.style.color= 'white';
+            another_driver_yes.style.background = '#083F6D';
+            another_driver_no.style.color = '#083F6D';
+            another_driver_no.style.background = 'white';
+            if ((woman.style.color == 'white') || (man.style.color == 'white'))
+                 {
+                    if ((policy_yes.style.color == 'white') || (policy_no.style.color == 'white')){
+                        if (birth_date.value.length > 0){
+                            box4.style.display = 'block';
+                        }
+                    }
+                }
+        }
+        another_driver_no.onclick = function() {
+            another_driver_no.style.color = 'white';
+            another_driver_no.style.background = '#083F6D';
+            another_driver_yes.style.color = '#083F6D';
+            another_driver_yes.style.background = 'white';
+            if ((woman.style.color == 'white') || (man.style.color == 'white'))
+                 {
+                    if ((policy_yes.style.color == 'white') || (policy_no.style.color == 'white')){
+                        if (birth_date.value.length > 0){
+                            box4.style.display = 'block';
+                        }
+                    }
+                }
+        }
+
+        birth_date.addEventListener('keyup', function(){
+            if ((woman.style.color == 'white') || (man.style.color == 'white')) {
+                 if ((policy_yes.style.color == 'white') || (policy_no.style.color == 'white'))
+                 {
+                    if ((another_driver_yes.style.color == 'white') || (another_driver_no.style.color == 'white')){
+                        box4.style.display = 'block';
+                    }
+                 }
+            }
+        });
+
+
     </script>
-    {% endif %}
-    
+</body>
+</html>

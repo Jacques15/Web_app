@@ -311,7 +311,7 @@ nav ul{
     height:40px;
     
     background: #FFFFFF;
-    color: #002844;
+    color: #083F6D;
     font-size: 18px;
     border-radius: 5px;
 
@@ -337,7 +337,7 @@ nav ul{
     height: 490px;
     left: 250px;
     top: 910px;
-    display: block;
+    display: none;
 
     border-radius: 10px;
 }
@@ -443,9 +443,9 @@ nav ul{
     height: 40px;
     left: 365px;
     top: 207px;
-    background: #083F6D;
+    background: white;
     font-size: 18px;
-    color:white;
+    color:#002844;
     border-radius: 5px;
 }
 
@@ -487,8 +487,8 @@ nav ul{
     height: 40px;
     left: 568px;
     top: 317px;
-    background: #083F6D;
-    color:white;
+    background: white;
+    color:#002844;
     font-size: 18px;
     border-radius: 5px;
 }
@@ -562,8 +562,8 @@ nav ul{
     height: 40px;
     left: 568px;
     top: 540px;
-    background: #083F6D;
-    color:white;
+    background: white;
+    color:#002844;
     font-size: 18px;
     border-radius: 5px;
 }
