@@ -10,6 +10,11 @@ def home():
 @app.route("/second", methods=['GET','POST'])
 def second():
     return render_template('insurance.html')
+
+@app.route("/last", methods=['GET','POST'])
+def last():
+    print("In last")
+    return render_template('page3.html')
     
 if __name__ == '__main__':
     app.run()
@@ -17,3 +22,5 @@ if __name__ == '__main__':
 @app.route("/third", methods=['GET','POST'])
 def third():
     return render_template('Test.html')
+
+
