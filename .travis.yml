@@ -12,6 +12,6 @@ install:
   - nvm install 10
 # command to run tests
 script:
-  - app.py
+  - python app.py
   
   
