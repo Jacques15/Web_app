@@ -41,7 +41,7 @@ def third():
     return render_template('Test.html')
 
 @app.route('/process', methods = ['POST','GET'])
-# This process saves the user name and surname from the last page
+# This process might be unused as well I am now realising
 def process():
     name = request.form.get("name")
     surname = request.form.get("surname")

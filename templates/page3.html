@@ -1,3 +1,4 @@
+<!-- This is the third page in the user-journey-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,6 +120,7 @@
         <a class = Redirect href="/">Home</a></Home>
     </div>
 
+    <!-- This script controls the behaviour of the first box. All relevant fields need to be entered for next section of website to be revealed-->
     <script>
         var given_name_box = document.getElementById("Given_name_box");
         var family_name_box = document.getElementById("Family_name_box");
@@ -130,6 +132,7 @@
         var check2 = document.getElementById("Check2");
         var check3 = document.getElementById("Check3");
 
+        //When text is entered in textbox, the function checks if all other relevant fields have been entered. If so, the next section of the webpage opens
         given_name_box.addEventListener('keyup', function(){
             if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (email_box.value.length > 0))
             {
@@ -137,6 +140,7 @@
             }
         });
 
+        //When text is entered in textbox, the function checks if all other relevant fields have been entered. If so, the next section of the webpage opens
         family_name_box.addEventListener('keyup', function(){
             if ((given_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (email_box.value.length > 0))
             {
@@ -144,6 +148,7 @@
             }
         });
 
+        //When text is entered in textbox, the function checks if all other relevant fields have been entered. If so, the next section of the webpage opens
         address_box.addEventListener('keyup', function(){
             if ((family_name_box.value.length > 0) && (given_name_box.value.length > 0) && (phone_box.value.length > 0) && (email_box.value.length > 0))
             {
@@ -151,6 +156,7 @@
             }
         });
 
+        //When text is entered in textbox, the function checks if all other relevant fields have been entered. If so, the next section of the webpage opens
         phone_box.addEventListener('keyup', function(){
             if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (given_name_box.value.length > 0) && (email_box.value.length > 0))
             {
@@ -158,13 +164,15 @@
             }
         });
 
+        //When text is entered in textbox, the function checks if all other relevant fields have been entered. If so, the next section of the webpage opens
         email_box.addEventListener('keyup', function(){
             if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (given_name_box.value.length > 0))
             {
                 if((check1.checked == true) || (check2.checked == true) || (check3.checked == true)) box1.style.display = 'block'; 
             }
         });
-
+        //This section controls the behaviour of the click buttons. Only one button can be selected at one time and if a button is clicked and the other fields are entered, the next section
+        //opens
         check1.onclick = function() {
             check1.checked = true;
             check2.checked = false;
@@ -185,6 +193,7 @@
         }
     </script>
 
+    <!-- This section controls the behaviour of the second block of code. All relevant fields need to be entered for the next section to open-->
     <script>
         var name_card_bar = document.getElementById("Name_card_bar");
         var billing_address_bar = document.getElementById("Billing_address_bar");
@@ -197,6 +206,7 @@
         var no = document.getElementById("No");
         var box2 = document.getElementById("Box2");
 
+    //When text is entered into textbox, the function checks if other fields have been entered. If so, the next section opens
     name_card_bar.addEventListener('keyup', function(){
         if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (cvc_bar.value.length > 0))
             {
@@ -204,6 +214,7 @@
             }
         });
 
+    //When text is entered into textbox, the function checks if other fields have been entered. If so, the next section opens
     billing_address_bar.addEventListener('keyup', function(){
         if ((name_card_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (cvc_bar.value.length > 0))
             {
@@ -211,6 +222,7 @@
             }
     });
 
+    //When text is entered into textbox, the function checks if other fields have been entered. If so, the next section opens
     card_number_bar.addEventListener('keyup', function(){
         if ((name_card_bar > 0) && (billing_address_bar.value.length > 0) && (expiry_bar.value.length > 0) && (cvc_bar.value.length > 0))
             {
@@ -218,6 +230,7 @@
             }
     });
 
+    //When text is entered into textbox, the function checks if other fields have been entered. If so, the next section opens
     expiry_bar.addEventListener('keyup', function(){
         if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (name_card_bar > 0) && (cvc_bar.value.length > 0))
             {
@@ -225,6 +238,8 @@
             }
     });
 
+    
+    //When text is entered into textbox, the function checks if other fields have been entered. If so, the next section opens
     cvc_bar.addEventListener('keyup', function(){
         if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0))
             {
@@ -232,6 +247,7 @@
             }
     });
     
+    //Changes color of Credit card button and removes color of Bank transfer button. If other fields have been entered open next section of website 
     credit_card.onclick = function() {
             credit_card.style.color= 'white';
             credit_card.style.background = '#083F6D';
@@ -240,6 +256,7 @@
             if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
     }
 
+    //Changes color of bank_transfer button and removes color of credit_card button. If other fields have been entered open next section of website 
     bank_transfer.onclick = function() {
             bank_transfer.style.color= 'white';
             bank_transfer.style.background = '#083F6D';
@@ -248,6 +265,7 @@
             if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
     }
 
+    //Changes color of yes button and removes color of no button. If other fields have been entered open next section of website 
     yes.onclick = function() {
             yes.style.color= 'white';
             yes.style.background = '#083F6D';
@@ -256,6 +274,7 @@
             if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
     }
 
+    //Changes color of no button and removes color of yes button. If other fields have been entered open next section of website 
     no.onclick = function() {
             no.style.color= 'white';
             no.style.background = '#083F6D';
@@ -265,6 +284,7 @@
     }
     </script>
 
+    <!-- This script displays the successful payment when Process_payment button is clicked-->
     <script>
         var process_payment = document.getElementById("Process_payments")
         var box3 = document.getElementById("Box3")
@@ -287,6 +307,7 @@
       });
     </script>
 
+    <!--This script is displays the name and surname of user in the quote summary by extracting it from the relevant textboxes -->
     <script>
         $(function () {
             $("#Given_name_box").keyup(function () {

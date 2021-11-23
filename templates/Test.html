@@ -1,3 +1,4 @@
+<!-- This is the second page in the user-journey-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,32 +191,39 @@
         </div>
     </div>
     </div>
+    <!--This script controls the behaviour of the behaviour of everything that happens on in the first box of the page. The next section of the page will not open until all 
+    relevant fields have been entered and all buttons have been clicked -->
     <script>
         var yes1 = document.getElementById('Yes1');
         var no1 = document.getElementById("No1");
         var park_input = document.getElementById("Park_input");
         var registration_input = document.getElementById("Registration_input");
         var box3 = document.getElementById('Box3');
+        //This function changes color of the yes button when clicked as well as remove color of no button (Thus, only 1 button is selected at a time)
         yes1.onclick = function() {
             yes1.style.color= 'white';
             yes1.style.background = '#083F6D';
             no1.style.color = '#083F6D';
             no1.style.background = 'white';
+            //If both fields have been entered and a button was selected the next section is opened
             if ((registration_input.value.length > 0) && (park_input.value.length > 0))
             {
                 box3.style.display = 'block';
             }
         }
+        //This function changes color of the no button when clicked and removed the color of the yes button
         no1.onclick = function() {
             no1.style.color = 'white';
             no1.style.background = '#083F6D';
             yes1.style.color = '#083F6D';
             yes1.style.background = 'white';
+            //If both fields have been entered and a button was selected the next section is opened
             if ((registration_input.value.length > 0) && (park_input.value.length > 0))
             {
                 box3.style.display = 'block';
             }
         }
+        //Looks for input in 'Park_input' textbox. If the other textbox is not empty and a button was pressed, the next section is opened
         park_input.addEventListener('keyup', function(){
             if (registration_input.value.length > 0) 
             {
@@ -228,6 +236,7 @@
             }
         });
 
+        //Looks for input in 'Registration' textbox. If the other textbox is not empty and a button was pressed, the next section is opened
         registration_input.addEventListener('keyup', function(){
             if (park_input.value.length > 0)  {
                 if ((yes1.style.color == 'white') || (no1.style.color == 'white'))
@@ -242,7 +251,8 @@
         });
 
     </script>
-
+    <!--This script controls the behaviour of the behaviour of everything that happens on in the first box of the page. The next section of the page will not open until all 
+    relevant fields have been entered and all buttons have been clicked -->
     <script>
         var woman = document.getElementById('Woman');
         var man = document.getElementById("Man");
@@ -253,6 +263,7 @@
         var birth_date = document.getElementById("Birth_date");
         var box4 = document.getElementById("Box4");
         
+        //Changes color of woman button and remove color of man button. If other fields have been entered, open next section of text
         woman.onclick = function() {
             woman.style.color= 'white';
             woman.style.background = '#083F6D';
@@ -267,6 +278,7 @@
                     }
                  }
         }
+        //Changes color of man button and remove color of woman button. If other fields have been entered, open next section of text
         man.onclick = function() {
             man.style.color = 'white';
             man.style.background = '#083F6D';
@@ -281,7 +293,7 @@
                     }
                  }
         }
-
+        //Changes color of yes button and remove color of no button. If other fields have been entered, open next section of text
         policy_yes.onclick = function() {
             policy_yes.style.color= 'white';
             policy_yes.style.background = '#083F6D';
@@ -296,7 +308,7 @@
                     }
                 }
         }
-
+        //Changes color of no button and remove color of yes button. If other fields have been entered, open next section of text
         policy_no.onclick = function() {
             policy_no.style.color = 'white';
             policy_no.style.background = '#083F6D';
@@ -311,7 +323,7 @@
                     }
                 }
         }
-
+        //Changes color of yes button and remove color of no button. If other fields have been entered, open next section of text
         another_driver_yes.onclick = function() {
             another_driver_yes.style.color= 'white';
             another_driver_yes.style.background = '#083F6D';
@@ -326,6 +338,7 @@
                     }
                 }
         }
+        //Changes color of no button and remove color of yes button. If other fields have been entered, open next section of text
         another_driver_no.onclick = function() {
             another_driver_no.style.color = 'white';
             another_driver_no.style.background = '#083F6D';
@@ -340,7 +353,7 @@
                     }
                 }
         }
-
+        //When text is entered into textbox, check if all buttons have been checked. If so, enter next section of text
         birth_date.addEventListener('keyup', function(){
             if ((woman.style.color == 'white') || (man.style.color == 'white')) {
                  if ((policy_yes.style.color == 'white') || (policy_no.style.color == 'white'))
@@ -355,6 +368,7 @@
 
     </script>
 
+    <!-- This script controls the behaviour of the check boxes. If one checkbox is selected, the others are unselected. The relevant plan is displayd based on selected checkbox-->
     <script>
         var check1 = document.getElementById('Check1');
         var check2 = document.getElementById('Check2');
@@ -407,7 +421,7 @@
         document.head.appendChild(t);
       });
     </script>
-
+    <!-- This script sends a dynamic post to the backend based on the checkbox selected. It is used to display correct information in quote summary-->
     <script>
         $(document).ready(function(){
           $("#Check1").click(function(){
