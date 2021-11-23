@@ -530,6 +530,7 @@ nav ul{
     height: 629px;
     left: 240px;
     top: 1235px;
+    display: none;
 }
 
 .Payment_details {
@@ -706,7 +707,7 @@ nav ul{
     color: #000000;
 }
 
-.CVC_bar{
+.CVC_Bar{
     position: absolute;
     width: 136px;
     height: 40px;
@@ -726,7 +727,7 @@ nav ul{
     width: 180px;
     height: 40px;
 
-    background: #083F6D;
+    background: white;
     border-radius: 5px;
 
     font-family: Lato;
@@ -743,7 +744,7 @@ nav ul{
     text-align: center;
     vertical-align:middle;
 
-    color: #FFFFFF;
+    color: #083F6D;
 }
 
 .Bank_transfer{
@@ -821,7 +822,7 @@ nav ul{
     left: 630px;
     top: 590px;
 
-    background: #073F6D;
+    background: white;
     border-radius: 5px;
 
     display: flex;
@@ -837,7 +838,7 @@ nav ul{
     line-height: 80px;
     /* identical to box height, or 444% */
 
-    color: white;
+    color: #073F6D;
 }
 
 .Box2{
@@ -846,6 +847,7 @@ nav ul{
     height: 460px;
     left: 240px;
     top: 2000px;
+    display: none;
 }
 
 .Quote_summary{
@@ -1085,6 +1087,7 @@ nav ul{
     position:absolute;
     top:1500px; 
     left: 800px;
+    display:none;
 }
 
 .Redirect

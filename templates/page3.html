@@ -52,11 +52,11 @@
     <span class = "Phone">Phone:</span>
     <span class = "Email">Email:</span>
 
-    <input class = "Given_name_box" type = "text"></div>
-    <input class = "Family_name_box" type = "text"></div>
-    <input class = "Address_box" type = "text"></div>
-    <input class = "Phone_box" type = "text"></div>
-    <input class = "Email_box" type="text"></div>
+    <input class = "Given_name_box" id = "Given_name_box" type = "text"></div>
+    <input class = "Family_name_box" id = "Family_name_box" type = "text"></div>
+    <input class = "Address_box" id = "Address_box" type = "text"></div>
+    <input class = "Phone_box" id = "Phone_box" type = "text"></div>
+    <input class = "Email_box" id = "Email_box" type="text"></div>
     <span class = "Given_name">Given Name</span>
     <span class = "Family_name">Family Name</span>
     <span class = "Payment_plan">Choose your payment plan</span>
@@ -66,9 +66,9 @@
     <div class = "First_bar"></div>
     <div class = "Second_bar"></div>
     <div class = "Third_bar"></div>
-    <input type="checkbox" class = "Check1">
-    <input type="checkbox" class = "Check2">
-    <input type="checkbox" class = "Check3">
+    <input type="checkbox" class = "Check1" id = "Check1">
+    <input type="checkbox" class = "Check2" id = "Check2">
+    <input type="checkbox" class = "Check3" id = "Check3">
     <span class = "Price1">$30.50</span>
     <span class = "Price2">$60</span>
     <span class = "Price3">$743</span>
@@ -76,25 +76,25 @@
     <span class = "Per_month">per month</span>
     <span class = "Per_year">per year</span>
 
-    <div class = "Box1">
+    <div class = "Box1" id = "Box1">
         <span class = "Payment_details">Payment Details</span>
         <span class = "Name_card">Name Card:</span> 
         <span class = "Billing_address">Billing Address:</span> 
         <span class = "Card_number">Card Number:</span> 
         <span class = "Expiry">Expiry:</span> 
-        <input class = "Name_card_bar" type = "text">
-        <input class = "Billing_address_bar" type="text">
-        <input class = "Card_number_bar" type = "text">
-        <input class = "Expiry_bar" type = "text">
+        <input class = "Name_card_bar" id = "Name_card_bar" type = "text">
+        <input class = "Billing_address_bar" id = "Billing_address_bar" type="text">
+        <input class = "Card_number_bar" id = "Card_number_bar" type = "text">
+        <input class = "Expiry_bar" id = "Expiry_bar" type = "text">
         <span class = "CVC">CVC</span>
-        <input class = "CVC_bar" type="text">
-        <button class = "Credit_card">Credit Card</button>
-        <button class = "Bank_transfer">Bank Transfer</button>
+        <input class = "CVC_Bar" id = "CVC_Bar" type="text">
+        <button class = "Credit_card" id = "Credit_card">Credit Card</button>
+        <button class = "Bank_transfer" id = "Bank_transfer">Bank Transfer</button>
         <span class = "Future_payments">Save future payments?</span>
-        <button class = "Yes">Yes</button>
-        <button class = "No">No</button>
+        <button class = "Yes" id = "Yes">Yes</button>
+        <button class = "No" id = "No">No</button>
     </div>
-    <div class = "Box2">
+    <div class = "Box2" id = "Box2">
         <span class = "Quote_summary"> Quote Summary</span>
         <span class = "Driver_name"> Driver Name:</span>
         <span class = "Vehicle_type"> Type of Vehicle:</span>
@@ -105,7 +105,7 @@
         <span class = "Plan2">Comprehensive</span>
         <span class = "Price4">$30.50 per fortnight</span>
         <button class = "Modify_details">Modify Details</button>
-        <button class = "Process_payments">Process Payment</button>
+        <button class = "Process_payments" id = "Process_payments">Process Payment</button>
         <div class = "Background">
             <img src="./static/images/Shaded_background.png" alt="background">
         </div>
@@ -113,9 +113,163 @@
             <img src="./static/images/Footer.png" alt="background">
         </div>
     </div>
-    <div class = "Box3">
+    <div class = "Box3" id = "Box3">
         <img src="./static/images/Successful_payment.png" alt="">
         <a class = Redirect href="/">Home</a></Home>
     </div>
+
+    <script>
+        var given_name_box = document.getElementById("Given_name_box");
+        var family_name_box = document.getElementById("Family_name_box");
+        var address_box = document.getElementById("Address_box");
+        var phone_box = document.getElementById("Phone_box");
+        var email_box = document.getElementById("Email_box");
+        var box1 = document.getElementById('Box1');
+        var check1 = document.getElementById("Check1");
+        var check2 = document.getElementById("Check2");
+        var check3 = document.getElementById("Check3");
+
+        given_name_box.addEventListener('keyup', function(){
+            if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (email_box.value.length > 0))
+            {
+                if((check1.checked == true) || (check2.checked == true) || (check3.checked == true)) box1.style.display = 'block';
+            }
+        });
+
+        family_name_box.addEventListener('keyup', function(){
+            if ((given_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (email_box.value.length > 0))
+            {
+                if((check1.checked == true) || (check2.checked == true) || (check3.checked == true)) box1.style.display = 'block';
+            }
+        });
+
+        address_box.addEventListener('keyup', function(){
+            if ((family_name_box.value.length > 0) && (given_name_box.value.length > 0) && (phone_box.value.length > 0) && (email_box.value.length > 0))
+            {
+                if((check1.checked == true) || (check2.checked == true) || (check3.checked == true)) box1.style.display = 'block'; 
+            }
+        });
+
+        phone_box.addEventListener('keyup', function(){
+            if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (given_name_box.value.length > 0) && (email_box.value.length > 0))
+            {
+                if((check1.checked == true) || (check2.checked == true) || (check3.checked == true)) box1.style.display = 'block'; 
+            }
+        });
+
+        email_box.addEventListener('keyup', function(){
+            if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (given_name_box.value.length > 0))
+            {
+                if((check1.checked == true) || (check2.checked == true) || (check3.checked == true)) box1.style.display = 'block'; 
+            }
+        });
+
+        check1.onclick = function() {
+            check1.checked = true;
+            check2.checked = false;
+            check3.checked = false;
+            if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (given_name_box.value.length > 0) && (email_box.value.length > 0)) box1.style.display = 'block'; 
+        }
+        check2.onclick = function() {
+            check2.checked = true;
+            check1.checked = false;
+            check3.checked = false;
+            if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (given_name_box.value.length > 0) && (email_box.value.length > 0)) box1.style.display = 'block'; 
+        }
+        check3.onclick = function() {
+            check3.checked = true;
+            check1.checked = false;
+            check2.checked = false;
+            if ((family_name_box.value.length > 0) && (address_box.value.length > 0) && (phone_box.value.length > 0) && (given_name_box.value.length > 0) && (email_box.value.length > 0)) box1.style.display = 'block'; 
+        }
+    </script>
+
+    <script>
+        var name_card_bar = document.getElementById("Name_card_bar");
+        var billing_address_bar = document.getElementById("Billing_address_bar");
+        var card_number_bar = document.getElementById("Card_number_bar");
+        var expiry_bar = document.getElementById("Expiry_bar");
+        var cvc_bar = document.getElementById("CVC_Bar");
+        var credit_card = document.getElementById("Credit_card");
+        var bank_transfer = document.getElementById("Bank_transfer");
+        var yes = document.getElementById("Yes");
+        var no = document.getElementById("No");
+        var box2 = document.getElementById("Box2");
+
+    name_card_bar.addEventListener('keyup', function(){
+        if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (cvc_bar.value.length > 0))
+            {
+                if (((credit_card.style.color == 'white') || (bank_transfer.style.color == 'white')) && ((yes.style.color == 'white') || (no.style.color == 'white')))  box1.style.display = 'block';
+            }
+        });
+
+    billing_address_bar.addEventListener('keyup', function(){
+        if ((name_card_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (cvc_bar.value.length > 0))
+            {
+                if (((credit_card.style.color == 'white') || (bank_transfer.style.color == 'white')) && ((yes.style.color == 'white') || (no.style.color == 'white')))  box1.style.display = 'block';
+            }
+    });
+
+    card_number_bar.addEventListener('keyup', function(){
+        if ((name_card_bar > 0) && (billing_address_bar.value.length > 0) && (expiry_bar.value.length > 0) && (cvc_bar.value.length > 0))
+            {
+                if (((credit_card.style.color == 'white') || (bank_transfer.style.color == 'white')) && ((yes.style.color == 'white') || (no.style.color == 'white')))  box1.style.display = 'block';
+            }
+    });
+
+    expiry_bar.addEventListener('keyup', function(){
+        if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (name_card_bar > 0) && (cvc_bar.value.length > 0))
+            {
+                if (((credit_card.style.color == 'white') || (bank_transfer.style.color == 'white')) && ((yes.style.color == 'white') || (no.style.color == 'white')))  box1.style.display = 'block';
+            }
+    });
+
+    cvc_bar.addEventListener('keyup', function(){
+        if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0))
+            {
+                if (((credit_card.style.color == 'white') || (bank_transfer.style.color == 'white')) && ((yes.style.color == 'white') || (no.style.color == 'white')))  box1.style.display = 'block';
+            }
+    });
+    
+    credit_card.onclick = function() {
+            credit_card.style.color= 'white';
+            credit_card.style.background = '#083F6D';
+            bank_transfer.style.color = '#083F6D';
+            bank_transfer.style.background = 'white';
+            if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
+    }
+
+    bank_transfer.onclick = function() {
+            bank_transfer.style.color= 'white';
+            bank_transfer.style.background = '#083F6D';
+            credit_card.style.color = '#083F6D';
+            credit_card.style.background = 'white';
+            if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
+    }
+
+    yes.onclick = function() {
+            yes.style.color= 'white';
+            yes.style.background = '#083F6D';
+            no.style.color = '#083F6D';
+            no.style.background = 'white';
+            if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
+    }
+
+    no.onclick = function() {
+            no.style.color= 'white';
+            no.style.background = '#083F6D';
+            yes.style.color = '#083F6D';
+            yes.style.background = 'white';
+            if ((billing_address_bar.value.length > 0) && (card_number_bar.value.length > 0) && (expiry_bar.value.length > 0) && (name_card_bar.value.length > 0) && (cvc_bar.value.length > 0)) box2.style.display = 'block';
+    }
+    </script>
+
+    <script>
+        var process_payment = document.getElementById("Process_payments")
+        var box3 = document.getElementById("Box3")
+        process_payment.onclick = function() {
+           box3.style.display = 'block'; 
+        }
+    </script>
 </body>
 </html>
