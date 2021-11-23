@@ -8,10 +8,12 @@ addons:
     organization: "jacques15" # the key of the org you chose at step #3
     
 install:
+  - pip install -U pytest
   - pip install -U flask
+  - pip install -U azure-cognitiveservices-search-customsearch
   - nvm install 10
+  - rvm install ruby-3.0.2
 # command to run tests
 script:
-  - python app.py
-  
+  - sonar-scanner
   
