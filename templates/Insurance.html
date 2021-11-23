@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link  rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class = "Turners_Image">
@@ -389,6 +390,17 @@
             second_selected.style.display = 'none';
             first_selected.style.display = 'none';
         }        
+    </script>
+    <script>
+        $(document).ready(function(){
+          $("#Woman").click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/second',
+                data: {text:"Check1"}
+            })
+          });
+        });
     </script>
 </body>
 </html>

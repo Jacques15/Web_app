@@ -9,11 +9,13 @@ def home():
 
 @app.route("/second", methods=['GET','POST'])
 def second():
+    text = request.form.get("text")
+    print(text)
     return render_template('insurance.html')
 
 @app.route("/last", methods=['GET','POST'])
 def last():
-    print("In last")
+    print("In Last")
     return render_template('page3.html')
     
 if __name__ == '__main__':
