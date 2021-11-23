@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style3.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class = "Turners_Image">
@@ -100,10 +101,10 @@
         <span class = "Vehicle_type"> Type of Vehicle:</span>
         <span class = "Plan"> Plan:</span>
         <span class = "Price"> Price:</span>
-        <span class = "Robert_smith">Robert Smith</span>
+        <span class = "Robert_smith" id = "Robert_smith"></span>
         <span class = "Audi">2014 Audi A4</span>
-        <span class = "Plan2">Comprehensive</span>
-        <span class = "Price4">$30.50 per fortnight</span>
+        <span class = "Plan2">{{plan}}</span>
+        <span class = "Price4">{{price}}</span>
         <button class = "Modify_details">Modify Details</button>
         <button class = "Process_payments" id = "Process_payments">Process Payment</button>
         <div class = "Background">
@@ -271,5 +272,18 @@
            box3.style.display = 'block'; 
         }
     </script>
+    <script>
+        $(function () {
+            $("#Given_name_box").keyup(function () {
+            $("#Robert_smith").text($("#Given_name_box").val() + " " + $('#Family_name_box').val());
+            });
+        });
+        $(function () {
+            $("#Family_name_box").keyup(function () {
+            $("#Robert_smith").text($("#Given_name_box").val() + " " + $('#Family_name_box').val());
+            });
+        });
+    </script>
+ 
 </body>
 </html>

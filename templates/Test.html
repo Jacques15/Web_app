@@ -395,11 +395,25 @@
     </script>
     <script>
         $(document).ready(function(){
-          $("#Woman").click(function(){
+          $("#Check1").click(function(){
             $.ajax({
                 type: 'POST',
-                url: '/second',
+                url: '/third',
                 data: {text:"Check1"}
+            })
+          });
+          $("#Check2").click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/third',
+                data: {text:"Check2"}
+            })
+          });
+          $("#Check3").click(function(){
+            $.ajax({
+                type: 'POST',
+                url: '/third',
+                data: {text:"Check3"}
             })
           });
         });
