@@ -7,16 +7,17 @@ app.secret_key = "hello"
 def home():
     return render_template('index.html')
 
-@app.route("/second", methods=['GET','POST'])
-def second():
-    text = request.form.get("text")
-    print(text)
-    session["text"] = text
-    return render_template('insurance.html')
+#
+#@app.route("/second", methods=['GET','POST'])
+#def second():
+#    text = request.form.get("text")
+#    print(text)
+#    session["text"] = text
+#    return render_template('insurance.html')
 
 @app.route("/last", methods=['GET','POST'])
 def last():
-    print("In Last")
+    # This sections checks which plan checkbox was ticked on the second page and input these values on the quote summary
     if (session["text"] == "Check1"):
         plan = "Comprehensive"
         price = "$30.50 per fortnight"
@@ -32,14 +33,15 @@ def last():
 if __name__ == '__main__':
     app.run()
 
+# Despite its name, actually the second page of the website. 
 @app.route("/third", methods=['GET','POST'])
 def third():
-    text = request.form.get("text")
-    print(text)
+    text = request.form.get("text") #Pretty sure this is unused code, but I'm commenting pretty close to the presentation, so too nervous to remove
     session["text"] = text
     return render_template('Test.html')
 
 @app.route('/process', methods = ['POST','GET'])
+# This process saves the user name and surname from the last page
 def process():
     name = request.form.get("name")
     surname = request.form.get("surname")
@@ -47,7 +49,7 @@ def process():
     print(name)
     print(surname)
 
-    return jsonify({'name':"Jacques", 'surname':"Theron"})
+    return jsonify({'name': name, 'surname': surname})
 
 
 
